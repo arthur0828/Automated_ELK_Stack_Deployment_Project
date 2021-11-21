@@ -108,6 +108,7 @@ SSH into the control node and follow the steps below:
 - Navigate to the ```/etc/ansible``` directory
 - Copy the ```elk-server-playbook.yml``` file to the ```/etc/ansible``` directory.
 - Update the ```filebeat-config.yml``` file to include the Elk Server's IP address
+  + ```cd ansible/files```
   + ```nano filebeat-config.yml```
   + **CTRL + W** > Type: *setup.kibana*
   + Un-comment that line and the *host* line by removing the *#*. 
@@ -120,6 +121,7 @@ SSH into the control node and follow the steps below:
   + Navigate to [http://[Elk-server-PublicIP]:5601/app/kibana]()
   + Navigate to **Kibana > Logs: Add log data > System logs > Module Status> Check data** to check that the installation worked as expected.
 - Update the ```metricbeat-config.yml``` file to include the Elk Server's IP address
+  + ```cd ansible/files```
   + ```nano metricbeat-config.yml```
   + **CTRL + W** > Type: *setup.kibana*
   + Un-comment that line and the *host* line by removing the *#*. 
